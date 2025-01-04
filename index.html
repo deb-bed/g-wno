@@ -129,7 +129,7 @@
     <!-- Podgląd zdjęcia -->
     <img id="photo-preview" alt="Podgląd zdjęcia">
 
-    <button type="submit">Zapisz dane</button>
+    <button type="submit">Generuj</button> <!-- Zmieniony tekst przycisku -->
 </form>
 
 <!-- Niestandardowy alert -->
@@ -147,7 +147,6 @@
     function closeCustomAlert() {
         document.getElementById("custom-alert").style.display = "none";
     }
-
 
     function resizeImage(file, targetWidth, targetHeight, callback) {
         const reader = new FileReader();
@@ -217,7 +216,7 @@
             try {
                 localStorage.setItem('userData', JSON.stringify(data));
                 showCustomAlert('Dane zostały zapisane!', () => {
-                    window.location.href = 'dowodnowy-1.html';
+                    window.location.href = 'id.html'; // Przekierowanie na stronę id.html
                 });
             } catch (error) {
                 showCustomAlert('Błąd podczas zapisywania danych: ' + error.message);
