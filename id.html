@@ -191,7 +191,7 @@
         </div>
     </section>
     <section id="praw">
-        <p id="userName">brak</p>
+       <p id="userName">brak</p>
         <p class="sub">Imię (Imiona)</p><br>
         <p id="userSurname">brak</p>
         <p class="sub">Nazwisko</p><br>
@@ -224,7 +224,7 @@
     <img src="https://ebywatelkonta.pl/zmianadanych-ogspirala/dowod_files/arrow-1.svg" alt="arrow" id="rotation" style="transform: rotate(-90deg);">
 </section>
 
-<div id="rogo">
+<section id="rogo">
     <div class="content">
         <p class="krecha"></p>
         <section class="dana">
@@ -264,7 +264,6 @@
         </section>
     </div>
 </div>
-
   <a class="buto">
     <div>
         <p class="info">Ostatnia aktualizacja</p>
@@ -444,19 +443,17 @@
     });
 
     // Funkcje pomocnicze
-    const setElementImage = (id, src) => {
-        const element = document.getElementById(id);
-        if (element && element.tagName === 'IMG') {
-            element.src = src;
-        }
-    };
+    function setElementText(id, text) {
+        document.getElementById(id).innerText = text;
+    }
 
-    const setElementText = (id, text) => {
+    function setElementImage(id, url) {
         const element = document.getElementById(id);
         if (element) {
-            element.textContent = text;
+            element.src = url;
         }
-    };
-    
+    }
+</script>
+
                                </body>
 </html>
