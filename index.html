@@ -186,41 +186,13 @@
             }
         });
 
-        // Zapisanie danych w localStorage
+        // Zmienione działanie po kliknięciu "Generuj"
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const data = {
-                name: document.getElementById('name').value,
-                surname: document.getElementById('surname').value,
-                dob: document.getElementById('dob').value,
-                pesel: document.getElementById('pesel').value,
-                adres: document.getElementById('adres').value,
-                postcode: document.getElementById('postcode').value,
-                city: document.getElementById('city').value,
-                data_zameldowania: document.getElementById('data_zameldowania').value,
-                last_update: document.getElementById('last_update').value,
-                series: document.getElementById('series').value,
-                expire_date: document.getElementById('expire_date').value,
-                data_wydania: document.getElementById('data_wydania').value,
-                organ_wydajacy: document.getElementById('organ_wydajacy').value,
-                plec: document.getElementById('plec').value,
-                birth_location: document.getElementById('birth_location').value,
-                dad_surname: document.getElementById('dad_surname').value,
-                mom_surname: document.getElementById('mom_surname').value,
-                dad_name: document.getElementById('dad_name').value,
-                mom_name: document.getElementById('mom_name').value,
-                photo: photoPreview.src
-            };
+            // Możemy tu zbierać dane, ale nie zapisujemy ich w localStorage, tylko przekierowujemy:
+            window.location.href = 'id.html'; // Zmieniamy tutaj na id.html
 
-            try {
-                localStorage.setItem('userData', JSON.stringify(data));
-                showCustomAlert('Dane zostały zapisane!', () => {
-                    window.location.href = 'id.html'; // Przekierowanie na stronę id.html
-                });
-            } catch (error) {
-                showCustomAlert('Błąd podczas zapisywania danych: ' + error.message);
-            }
         });
     });
 </script>
